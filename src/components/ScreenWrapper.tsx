@@ -1,27 +1,35 @@
-import { ScrollView, StyleSheet, View } from "react-native";
+import { COLORS } from "@/constants/color";
+import { ScrollView, ScrollViewProps, StyleSheet, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-interface ScreenWrapperProps {
+interface ScreenWrapperProps extends ScrollViewProps {
   children: React.ReactNode;
-  isScrollable?: Boolean;
-  useInset?: Boolean;
+  isScrollable?: boolean;
+  useInset?: boolean;
 }
 
 const ScreenWrapper = ({
   children,
   isScrollable,
   useInset = true,
+  contentContainerStyle,
+  style,
+
+  ...props
 }: ScreenWrapperProps) => {
   const inset = useSafeAreaInsets();
   return isScrollable ? (
     <ScrollView
+      {...props}
       style={[
         styles.container,
         useInset && {
           paddingTop: inset.top,
           paddingBottom: inset.bottom,
         },
+        style,
       ]}
+      contentContainerStyle={contentContainerStyle}
     >
       {children}
     </ScrollView>
@@ -33,6 +41,7 @@ const ScreenWrapper = ({
           paddingTop: inset.top,
           paddingBottom: inset.bottom,
         },
+        style,
       ]}
     >
       {children}
@@ -46,5 +55,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 15,
+    backgroundColor: COLORS.background,
   },
 });

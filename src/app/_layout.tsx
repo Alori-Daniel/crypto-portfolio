@@ -25,6 +25,11 @@ export default function RootLayout() {
         name="(screens)/onboarding"
         options={{ headerShown: false, animation: "fade_from_bottom" }}
       />
+
+      <Stack.Screen
+        name="(auth)/register"
+        options={{ headerShown: false, animation: "slide_from_right" }}
+      />
     </Stack>
   );
 }

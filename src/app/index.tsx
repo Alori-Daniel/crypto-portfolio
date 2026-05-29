@@ -12,7 +12,7 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 
-const { width, height } = Dimensions.get("screen");
+const { width, height } = Dimensions.get("window");
 export default function Index() {
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
@@ -48,7 +48,7 @@ export default function Index() {
   return (
     <ImageBackground source={backgroungImage} style={styles.container}>
       <Animated.Image source={icon} style={rStyle} />
-      <CustomText variant="bold" style={[styles.text]}>
+      <CustomText variant="bold" color="white" style={[styles.text]}>
         tMinus1
       </CustomText>
     </ImageBackground>
