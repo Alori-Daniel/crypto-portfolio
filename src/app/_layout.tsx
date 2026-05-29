@@ -30,6 +30,22 @@ export default function RootLayout() {
         name="(auth)/register"
         options={{ headerShown: false, animation: "slide_from_right" }}
       />
+      <Stack.Screen
+        name="(auth)/mobileregisteration"
+        options={{ headerShown: false, animation: "fade_from_bottom" }}
+      />
+      <Stack.Screen
+        name="(auth)/verification"
+        options={{ headerShown: false, animation: "slide_from_right" }}
+      />
+      <Stack.Screen
+        name="(auth)/success"
+        options={{ headerShown: false, animation: "fade_from_bottom" }}
+      />
+      <Stack.Screen
+        name="(tabs)"
+        options={{ headerShown: false, animation: "fade_from_bottom" }}
+      />
     </Stack>
   );
 }

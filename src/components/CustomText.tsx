@@ -2,7 +2,7 @@ import { COLORS } from "@/constants/color";
 import { ReactNode } from "react";
 import { StyleProp, StyleSheet, Text, TextStyle } from "react-native";
 type variant = "bold" | "regular" | "semibold";
-type colorVariant = "white" | "darktext" | "black";
+type colorVariant = "white" | "darktext" | "black" | "secondary";
 
 interface TextProps {
   children: ReactNode;
@@ -19,6 +19,7 @@ const ColorByVariant: Record<colorVariant, string> = {
   white: COLORS.white,
   darktext: COLORS.darkText,
   black: COLORS.black,
+  secondary: COLORS.secondary,
 };
 
 const CustomText = ({
