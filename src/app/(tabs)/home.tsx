@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import ScreenWrapper from "@/components/ScreenWrapper";
+import { StyleSheet, Text } from "react-native";
 
 const home = () => {
   return (
-    <View>
+    <ScreenWrapper>
       <Text>home</Text>
-    </View>
+    </ScreenWrapper>
   );
 };
 

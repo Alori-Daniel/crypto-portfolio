@@ -1,7 +1,7 @@
 import Svg, { Path, SvgProps } from "react-native-svg";
 
 interface ColorProp extends SvgProps {
-  color: string;
+  color: any;
 }
 const SvgComponent = (props: ColorProp) => (
   <Svg width={24} height={24} fill="none" {...props}>
